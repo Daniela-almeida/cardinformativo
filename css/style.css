@@ -1,0 +1,222 @@
+/* fontes */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Montserrat:wght@400;500&display=swap");
+
+:root {
+  --background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent-text: hsl(277, 64%, 61%);
+  --title-end-numbers: hsl(0, 0%, 100%);
+  --texts: hsla(0, 0%, 100%, 0.75);
+  --subtext-number: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+
+  background: var(--background);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex: column;
+  align-items: center;
+}
+
+.content-card {
+  background: var(--card-background);
+  box-shadow: -20px -10px 55px 3px rgba(89, 0, 158, 0.84);
+  -webkit-box-shadow: -20px -10px 55px 3px rgba(89, 0, 158, 0.84);
+  -moz-box-shadow: -20px -10px 55px 3px rgba(89, 0, 158, 0.84);
+  border-radius: 5px;
+  width: 66vw;
+  height: 41.5vh;
+  display: flex;
+  flex-direction: row;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.title-card h2 {
+  color: var(--title-end-numbers);
+  font-size: 2.2em;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  left: 3em;
+  top: 1em;
+  width: 21vw;
+  transition: 0.4s ease-in-out;
+}
+
+.text-card p {
+  color: var(--texts);
+  font-size: 1em;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 200;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 18.5em;
+  top: 9em;
+  width: 15vw;
+}
+.sub-texts {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 7em;
+  position: relative;
+  right: 32em;
+  top: 2em;
+}
+.sub-texts h4 p {
+  display: flex;
+  flex-direction: column;
+}
+.sub-texts h4 {
+  color: var(--title-end-numbers);
+  font-size: 1.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  transition: 0.4s ease-in-out;
+}
+
+.sub-texts p {
+  color: var(--subtext-number);
+  position: relative;
+  top: 1.3em;
+  right: 6em;
+  font-size: 0.8em;
+  font-family: "Lexend Deca", sans-serif;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.img-card img {
+  width: auto;
+  height: 41.5vh;
+  margin-left: -22em;
+  /* filter: hue-rotate(300deg); */
+  filter: hue-rotate(300deg);
+  background: hsl(277, 64%, 61%);
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+/* hovers */
+h4:hover {
+  color: hsl(277, 64%, 61%);
+}
+
+@media only screen and (max-width: 625px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    padding: 3em;
+  }
+  .img-card img {
+    display: none;
+  }
+  .title-card h2 {
+    position: relative;
+    top: 1em;
+    left: -0.5em;
+    width: 97vw;
+  }
+  .text-card p {
+    position: relative;
+    right: 1em;
+    top: 3em;
+    width: 72vw;
+  }
+
+  .sub-texts {
+    display: flex;
+    gap: 1px;
+    position: relative;
+    right: 9em;
+    top: 6em;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 0.8em;
+  }
+  .sub-texts p {
+    top: 2em;
+    right: 0;
+    left: 5em;
+  }
+
+  .sub-texts h4 {
+    position: relative;
+    left: 5em;
+  }
+}
+
+@media only screen and (min-width: 626px) and (max-width: 1400px) {
+  .content-card {
+    height: 52.2vh;
+    width: 75vw;
+    margin-left: 10em;
+  }
+  .title-card h2 {
+    position: relative;
+    top: 1em;
+    left: 2.5em;
+    width: 29vw;
+  }
+  .text-card p {
+    position: relative;
+    right: 19em;
+    top: 8em;
+    width: 17vw;
+  }
+
+  .sub-texts {
+    display: flex;
+    gap: 1px;
+    position: relative;
+    right: 41em;
+    top: 3em;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 0.9em;
+  }
+  .sub-texts p {
+    top: 2em;
+    right: 0;
+    left: 5em;
+  }
+
+  .sub-texts h4 {
+    position: relative;
+    left: 5em;
+  }
+
+  .img-card img {
+    height: 52.2vh;
+  }
+}
